@@ -1,0 +1,12 @@
+.App { 
+    display: flex;
+    flex-direction: column;
+    margin: 1em;
+}
+
+.mapResultsStack {
+    align-items: stretch;
+    justify-content: center;
+    display: flex;
+    padding: 2em;
+}
