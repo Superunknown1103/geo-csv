@@ -3,7 +3,7 @@ import styles from '../css/Search.module.css';
 import Button from '@mui/material/Button';
 import ButtonGroup from '@mui/material/ButtonGroup';
 
-const Search = () => {
+const Search = (props) => {
     const [searchInput, setSearchInput] = useState('');
 
     const handleSearchChange = (e) => {
@@ -39,7 +39,7 @@ const Search = () => {
                 onChange={handleSearchChange}
                 value={searchInput}
             ></input>
-            <Button onClick={() => { alert(searchInput) }} variant="contained" sx={{ marginBottom: "0.5em" }}>Search</Button>
+            <Button onClick={() => { props.setSearch({query: searchInput}) }} variant="contained" sx={{ marginBottom: "0.5em" }}>Search</Button>
             <span className={styles.suggestions}>
                 Commonly Searched Items:
                     {commonlySearchedItems}
